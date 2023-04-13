@@ -1,0 +1,33 @@
+{
+    "name": "baygin/php-search-algorithms",
+    "description": "The search algorithms implementation for the php arrays that usable as a composer package",
+    "keywords": [
+        "php",
+        "array",
+        "binary-search",
+        "search-algorithm"
+    ],
+    "type": "library",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "baygin",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Baygin\\SearchAlgorithm\\": "src"
+        }
+    },
+    "version": "1.0.0",
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}
