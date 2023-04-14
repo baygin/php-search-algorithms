@@ -4,6 +4,20 @@ The search algorithm implementation in PHP 8 to find the value with the query as
 
 # Usage
 
+## Install
+
+### Git Clone
+
+```bash
+git clone https://github.com/baygin/php-search-algorithms.git
+```
+
+### Composer
+
+```bash
+composer require baygin/php-search-algorithms
+```
+
 ## Binary Search
 
 ### Array
