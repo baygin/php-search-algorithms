@@ -1,4 +1,4 @@
-# The Search Algorithms Implemantation in PHP 8
+# The Search Algorithms Implementation in PHP 8
 
 The search algorithm implementation in PHP 8 to find the value with the query as fast.
 
