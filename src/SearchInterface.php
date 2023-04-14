@@ -16,9 +16,5 @@ interface SearchInterface
 
     public function getFoundValue(): mixed;
 
-    public function getType(): string;
-
-    public function setType(string $type): self;
-
     public function search(): void;
 }

@@ -29,18 +29,6 @@ abstract class SearchAbstract implements SearchInterface
     protected mixed $foundValue = null;
 
     /**
-     * Array: array <- default
-     * Arrays in array: arrays in array
-     * Objects in array: objects in array
-     */
-    protected $types = [
-        "array",
-        "arrays in array",
-        "objects in array",
-    ];
-    protected $type = "array";
-
-    /**
      * @return int|string
      */
     public function getFoundIndex(): int|string
@@ -90,22 +78,6 @@ abstract class SearchAbstract implements SearchInterface
     public function setSearchValue(int|string $searchValue): self
     {
         $this->searchValue = $searchValue;
-        return $this;
-    }
-
-    public function getType(): string
-    {
-        return $this->type;
-    }
-
-    public function setType(string $type): self
-    {
-        if (!in_array($type, $this->types)) {
-            throw new InvalidArgumentException("The type must be in 'array', 'arrays in array' or 'objects in array'.");
-        }
-
-        $this->type = $type;
-
         return $this;
     }
 

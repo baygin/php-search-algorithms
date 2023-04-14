@@ -44,7 +44,6 @@ $search = new BinarySearch();
 
 $search->setCompareCallback(fn ($current, $searchValue) => $current["id"] === $searchValue)
     ->setDirectionCallback(fn ($current, $searchValue) => $current["id"] < $searchValue)
-    ->setType("arrays in array")
     ->setArray($array)
     ->setSearchValue(81300)
     ->search();
@@ -71,7 +70,6 @@ $search = new BinarySearch();
 $search
     ->setCompareCallback(fn ($current, $searchValue) => $current->id === $searchValue)
     ->setDirectionCallback(fn ($current, $searchValue) => $current->id < $searchValue)
-    ->setType("objects in array")
     ->setArray($array)
     ->setSearchValue(81300)
     ->search();

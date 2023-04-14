@@ -84,7 +84,6 @@ final class BinarySearchTest extends TestCase
         $search
             ->setCompareCallback(fn ($current, $searchValue) => $current === $searchValue)
             ->setDirectionCallback(fn ($current, $searchValue) => $current < $searchValue)
-            ->setType("array")
             ->setArray($array)
             ->setSearchValue(999999999)
             ->search();
@@ -108,7 +107,6 @@ final class BinarySearchTest extends TestCase
         $search
             ->setCompareCallback(fn ($current, $searchValue) => $current["id"] === $searchValue)
             ->setDirectionCallback(fn ($current, $searchValue) => $current["id"] < $searchValue)
-            ->setType("arrays in array")
             ->setArray($array)
             ->setSearchValue(81300)
             ->search();
@@ -143,7 +141,6 @@ final class BinarySearchTest extends TestCase
         $search
             ->setCompareCallback(fn ($current, $searchValue) => $current->id === $searchValue)
             ->setDirectionCallback(fn ($current, $searchValue) => $current->id < $searchValue)
-            ->setType("objects in array")
             ->setArray($array)
             ->setSearchValue(81300)
             ->search();
