@@ -35,6 +35,9 @@ final class BinarySearch extends SearchAbstract
             throw new InvalidArgumentException('The $directionCallback attribute must be instance of the type callback. Set attribute using by $class->setDirectionClass(fn($a, $b) => $a > $b)');
         }
 
+        $this->foundIndex = false;
+        $this->foundValue = null;
+
         $this->loop();
     }
 

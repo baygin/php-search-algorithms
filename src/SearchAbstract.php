@@ -21,7 +21,7 @@ abstract class SearchAbstract implements SearchInterface
     /**
      * The found data in which index
      */
-    protected int|string $foundIndex = -1;
+    protected int|string|bool $foundIndex = false;
 
     /**
      * The found data
@@ -29,9 +29,9 @@ abstract class SearchAbstract implements SearchInterface
     protected mixed $foundValue = null;
 
     /**
-     * @return int|string
+     * @return int|string|bool
      */
-    public function getFoundIndex(): int|string
+    public function getFoundIndex(): int|string|bool
     {
         return $this->foundIndex;
     }

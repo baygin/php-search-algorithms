@@ -12,7 +12,7 @@ interface SearchInterface
 
     public function getSearchValue(): null|int|string;
 
-    public function getFoundIndex(): null|int|string;
+    public function getFoundIndex(): null|int|string|bool;
 
     public function getFoundValue(): mixed;
 

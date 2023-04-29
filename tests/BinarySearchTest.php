@@ -76,10 +76,16 @@ final class BinarySearchTest extends TestCase
 
         $this->assertSame(98588, $search->getFoundIndex());
         $this->assertSame(98589, $search->getFoundValue());
+    }
 
-        /**
-         * There is not found data
-         */
+    public function testBinarysearchNotFoundData(): void
+    {
+        $array = [];
+
+        for ($index = 0; $index < 100 * 10000; $index++) {
+            $array[] = $index + 1;
+        }
+
         $search = new BinarySearch();
         $search
             ->setCompareCallback(fn ($current, $searchValue) => $current === $searchValue)
@@ -88,7 +94,9 @@ final class BinarySearchTest extends TestCase
             ->setSearchValue(999999999)
             ->search();
 
-        $this->assertSame(-1, $search->getFoundIndex());
+        $foundIndex = $search->getFoundIndex();
+
+        $this->assertFalse($foundIndex);
     }
 
     public function testBinarySearchLoopArraysInArray(): void
