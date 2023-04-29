@@ -78,7 +78,7 @@ final class BinarySearchTest extends TestCase
         $this->assertSame(98589, $search->getFoundValue());
     }
 
-    public function testBinarysearchNotFoundData(): void
+    public function testBinarySearchNotFoundData(): void
     {
         $array = [];
 
@@ -95,8 +95,10 @@ final class BinarySearchTest extends TestCase
             ->search();
 
         $foundIndex = $search->getFoundIndex();
+        $foundValue = $search->getFoundValue();
 
         $this->assertFalse($foundIndex);
+        $this->assertNull($foundValue);
     }
 
     public function testBinarySearchLoopArraysInArray(): void
