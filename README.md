@@ -31,7 +31,7 @@ for ($index = 0; $index < 100 * 10000; $index++) {
 
 $search = new BinarySearch();
 
-$search ->setCompareCallback(fn ($current, $searchValue) => $current === $searchValue)
+$search->setCompareCallback(fn ($current, $searchValue) => $current === $searchValue)
     ->setDirectionCallback(fn ($current, $searchValue) => $current < $searchValue)
     ->setArray($array)
     ->setSearchValue(98589)
@@ -81,8 +81,7 @@ for ($index = 0; $index < 100 * 10000; $index++) {
 }
 
 $search = new BinarySearch();
-$search
-    ->setCompareCallback(fn ($current, $searchValue) => $current->id === $searchValue)
+$search->setCompareCallback(fn ($current, $searchValue) => $current->id === $searchValue)
     ->setDirectionCallback(fn ($current, $searchValue) => $current->id < $searchValue)
     ->setArray($array)
     ->setSearchValue(81300)
